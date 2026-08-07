@@ -171,3 +171,339 @@ body{
     padding: 30px 15px;
   }
 }
+
+.feedback-item button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-item button:hover {
+  background: darkred;
+}
+
+.dashboard-container {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  margin-bottom: 30px;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card{
+width:250px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+.card h1 {
+  font-size: 40px;
+}
+
+.feedback-item select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.feedback-item button {
+  width: 100%;
+  padding: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-item button:hover {
+  background: darkred;
+}
+
+.navbar {
+  background: #2563eb;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+}
+
+.navbar h2 {
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+}
+
+.nav-links{
+flex-direction:column;
+margin-top:15px;
+text-align:center;
+}
+
+.feedback-card{
+width:95%;
+}
+
+.dashboard-cards{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+}
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+/* My Feedback Page */
+
+.my-feedback-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.my-feedback-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2563eb;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.feedback-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  transition: 0.3s;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-card h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.feedback-card p {
+  margin: 8px 0;
+}
+
+.feedback-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.edit-btn {
+  flex: 1;
+  background: #2563eb;
+  color: white;
+}
+
+.delete-btn {
+  flex: 1;
+  background: crimson;
+  color: white;
+}
+
+@media (max-width:768px){
+
+.my-feedback-container{
+width:95%;
+}
+
+.feedback-grid{
+grid-template-columns:1fr;
+}
+
+.feedback-actions{
+flex-direction:column;
+}
+
+.feedback-card{
+padding:18px;
+}
+
+}
+
+.my-feedback-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.my-feedback-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2563eb;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.feedback-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card h3 {
+  color: #2563eb;
+}
+
+.feedback-card input,
+.feedback-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.feedback-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.edit-btn {
+  flex: 1;
+  background: #2563eb;
+  color: white;
+}
+
+.delete-btn {
+  flex: 1;
+  background: crimson;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .feedback-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-actions {
+    flex-direction: column;
+  }
+
+  .my-feedback-container {
+    width: 95%;
+  }
+}
+
+.profile-container{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:50px 20px;
+}
+
+.profile-card{
+width:380px;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+text-align:center;
+}
+
+.profile-image{
+width:160px;
+height:160px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+.profile-card button{
+margin-top:20px;
+width:100%;
+}
+
+@media(max-width:768px){
+
+.profile-card{
+width:95%;
+}
+
+.profile-image{
+width:120px;
+height:120px;
+}
+
+}
