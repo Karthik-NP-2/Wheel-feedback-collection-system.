@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -7,13 +8,12 @@ function Home() {
 
       <div className="home">
         <h1>Welcome to Feedback Collection System</h1>
-
-        <p>
-          Collect, manage and analyze customer feedback easily.
-        </p>
+        <p>Collect and manage feedback efficiently.</p>
 
         <button>Get Started</button>
       </div>
+
+      <Footer />
     </>
   );
 }

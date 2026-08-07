@@ -121,3 +121,17 @@ body{
 .feedback-card button:hover {
   background: #084298;
 }
+
+.footer {
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+.home h1 {
+  color: #333;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
