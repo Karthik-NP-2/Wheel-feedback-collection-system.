@@ -135,3 +135,39 @@ body{
   font-size: 42px;
   margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .home {
+    margin-top: 60px;
+    padding: 20px;
+  }
+
+  .home h1 {
+    font-size: 32px;
+  }
+
+  .home p {
+    font-size: 18px;
+  }
+
+  .feedback-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .feedback-container {
+    padding: 30px 15px;
+  }
+}

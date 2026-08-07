@@ -3,10 +3,12 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function Login() {
+function Register() {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
   const handleChange = (e) => {
@@ -19,28 +21,33 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "http://localhost:5000/api/auth/register",
         {
+          name: formData.name,
           email: formData.email,
           password: formData.password,
         }
       );
 
-      // Save JWT Token
-      localStorage.setItem("token", response.data.token);
-      window.location.href = "/";
       alert(response.data.message);
 
-      // Clear form
+      // Clear form after successful registration
       setFormData({
+        name: "",
         email: "",
         password: "",
+        confirmPassword: "",
       });
 
     } catch (error) {
-      alert(error.response?.data?.message || "Login Failed");
+      alert(error.response?.data?.message || "Registration Failed");
     }
   };
 
@@ -50,9 +57,18 @@ function Login() {
 
       <div className="feedback-container">
         <div className="feedback-card">
-          <h2>Login</h2>
+          <h2>Register</h2>
 
           <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+
             <input
               type="email"
               name="email"
@@ -71,8 +87,17 @@ function Login() {
               required
             />
 
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
+            />
+
             <button type="submit">
-              Login
+              Register
             </button>
           </form>
         </div>
@@ -83,4 +108,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
